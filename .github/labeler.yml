@@ -32,7 +32,7 @@ changelog:
 
 core/docs:
 - changed-files:
-  - any-glob-to-any-file:['**/*.md', '!CHANGELOG.md']
+  - any-glob-to-any-file: ['**/*.md', '!CHANGELOG.md']
 
 autodoc:
 - changed-files:
