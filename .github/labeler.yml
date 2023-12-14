@@ -23,17 +23,20 @@ core/db/migrations:
   - any-glob-to-any-file: kong/db/migrations/**/*
 
 core/db:
-- changed-files:
-  - any-glob-to-any-file: 'kong/db/**/*'
-  - all-globs-to-all-files: '!kong/db/migrations/**/*'
+- all:
+  - changed-files:
+    - any-glob-to-any-file: 'kong/db/**/*'
+    - all-globs-to-all-files: '!kong/db/migrations/**/*'
 
 changelog:
 - changed-files:
   - any-glob-to-any-file: CHANGELOG.md
 
 core/docs:
-- changed-files:
-  - any-glob-to-any-file: ['**/*.md', '!CHANGELOG.md']
+- all:
+  - changed-files:
+    - any-glob-to-any-file: '**/*.md'
+    - all-globs-to-all-files: '!CHANGELOG.md'
 
 autodoc:
 - changed-files:
@@ -56,15 +59,17 @@ core/logs:
   - any-glob-to-any-file: kong/pdk/log.lua
 
 core/pdk:
-- changed-files:
-  - any-glob-to-any-file: kong/pdk/**/*
-  - all-globs-to-all-files: '!kong/pdk/log.lua'
+- all:
+  - changed-files:
+    - any-glob-to-any-file: kong/pdk/**/*
+    - all-globs-to-all-files: '!kong/pdk/log.lua'
 
 core/proxy:
-- changed-files:
-  - any-glob-to-any-file: kong/runloop/**/*
-  - all-globs-to-all-files: '!kong/runloop/balancer/*'
-  - all-globs-to-all-files: '!kong/runloop/plugin_servers/*'
+- all:
+  - changed-files:
+    - any-glob-to-any-file: kong/runloop/**/*
+    - all-globs-to-all-files: '!kong/runloop/balancer/*'
+    - all-globs-to-all-files: '!kong/runloop/plugin_servers/*'
 
 core/router:
 - changed-files:
